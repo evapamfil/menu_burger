@@ -1,0 +1,190 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@font-face {
+    font-family; "Arial";
+    src: url("../font/arial.ttf");
+}
+
+body{
+    background-color: #ccc;
+}
+
+header{
+    height: auto;
+    background-color: #fff;
+
+    overflow: hidden;
+}
+
+ul{
+    margin-right: 10%;
+    float: right;
+}
+
+ul li{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    width: 160px;
+    height: 40px;
+
+    background-color: #eee;
+    border-radius: 4px;
+
+    font-size: 12px;
+    font-family: arial;
+    color: #565a5c;
+    line-height: normal;
+
+    margin: 5px 0px;
+
+}
+
+li span{
+    font-weight: bold;
+}
+
+/* HOVER */ 
+
+ul li:hover{
+    background-color: #f46465;  
+    color: #fff;
+}
+
+/* BUTTONS */ 
+
+button{
+    width: 80px;
+    height: 40px;
+
+    margin: 5px;
+    margin-left: 10%;
+
+    border: none;
+    border-radius: 4px;
+    background-color: #eee;
+    cursor: pointer;
+
+    font-size: 14px;
+    font-family: arial;
+    color: #565a5c;
+    font-weight: bold;
+}
+
+#menu{
+    float: right;
+    display: none;
+}
+
+button img{
+    height: 10px;
+    width: auto;
+}
+
+/* HOVER BUTTON*/ 
+
+button:hover{
+    background-color: #f46465;  
+    color: #fff;
+}
+
+/* VIEW MENU */ 
+
+.view{
+    display: block;
+    animation-name: view;
+    animation-duration: 1s;
+}
+
+/* ANIMATION */ 
+
+@-webkit-keyframes view {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes view {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* RESPONSIVE */ 
+
+@media all and (max-width: 1200px) {
+    ul{
+        margin-right: 5px;
+    }
+    #home{
+        margin-left: 5px;
+    }
+}
+
+@media all and (max-width: 950px) {
+    #menu{
+        display: block !important;
+    }
+
+    ul {
+        width: 98%;
+        margin: 0px 5px; 
+        display: none;
+
+    }
+    ul li{
+        display: flex;
+        width: 100%;
+    }
+
